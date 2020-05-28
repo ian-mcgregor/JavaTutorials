@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link href="javaStyleSheet.css" rel="stylesheet">
+	<title>Varargs</title>
+</head>
+<body>
+		<!-- Navigation Bar -->
+	<div class="bg-img">
+	  <div class="container">
+	    <div class="topnav">
+	      <a href="index.html">Home</a>
+	      <a href="aboutUs.html">About Us</a>
+	      <a href="javaContent.html">Content</a>
+	    </div>
+	  </div>
+	</div>
+
+<div class="sidenav">
+  <a href="algorithm.html">What is an Algorithm Anyways?</a>
+  <a href="hello.html">Hello World</a>
+  <a href="comments.html">Comments</a>
+  <a href="encoding.html">Number and Character Encodings</a>
+  <a href="variables.html">Variables</a>
+  <a href="conversions.html">Primitive Type Conversions</a>
+  <a href="scope.html">Scope, Operators and Precedence</a>
+  <a href="error.html">System In, Out and Error</a>
+  <a href="conditional.html">Conditional Statements</a>
+  <a href="switch.html">Switch Statements</a>
+  <a href="while_loops.html">While-Loops, Continue and Break</a>
+  <a href="do_while.html">Do-While Loops</a>
+  <a href="for_loops.html">For-Loops</a>
+  <a href="strings.html">Strings</a>
+  <a href="type_wrap.html">Type Wrappers, Auto-Boxing and Unboxing</a>
+  <a href="writing_methods.html">Writing Functions</a>
+  <a href="arrays.html">Arrays</a>
+  <a href="arrays_examples.html">Array Examples</a>
+  <a href="var_args.html">Varargs-Variable Length Arguments</a>
+  <a href="2D.html">2D Arrays</a>
+  <a href="Expressions.html">Catching Expressions</a>
+  <a href="Writing.html">Writing to a File</a>
+  <a href="Reading1.html">Reading and Writing Files I</a>
+  <a href="Reading2.html">Reading and Writing Files II</a>
+  <a href="Parsing.html">Parsing Strings</a>
+  <a href="Tokens.html">Parsing Strings into Fixed Length Tokens</a>
+</div>
+<div class="main">
+	<h1>
+		Varargs - Variable Length Arguments
+	</h1>
+
+	<br></br>
+
+	<p>
+		When we define a function we may want to allow the user to pass an arbitrary number of arguments into the function.  We can do this with varargs.  A vararg (variable-length argument) is specified with three periods (…) between the type and variable name in the function’s parameter list as shown below.
+	</p>
+
+	<pre>
+		static void printNames(String ... names) {
+		    ...
+		}
+	</pre>
+
+	<br></br>
+	<p>
+		This syntax tells the compiler that printNames can be called with zero or more String arguments.  Internally, names is declared as an array of type String that we can access as normal.
+	</p>
+
+	<pre>
+		static void printNames(String ... names) {
+		    for (String name : names) {
+		        System.out.println("Name: " + name);
+		    }
+		}
+	</pre>
+	<br></br>
+
+	<p>
+		A function can also have other parameters in addition to a variable length argument, however the variable length argument must be the last parameter listed.
+	</p>
+
+	<pre>
+		static void printNames(String greeting, String ... names) {
+		    for (String name: names) {
+		        System.out.println(greeting + " " + name);
+		    }
+		}
+	</pre>
+	<br>
+	<p>
+		Restriction:  There can be only one variable length argument.
+	</p>
+
+
+</div>
+</body>
+</html>
